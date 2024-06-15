@@ -1,11 +1,9 @@
 import json
-import uuid
 import decimal
 import os
 import boto3
-import time
 
-from datetime import datetime, timedelta
+from monitor import get_last_minute_records
 
 
 # Helper class to convert a DynamoDB item to JSON.
@@ -29,22 +27,12 @@ KINESIS_NAME = os.environ['KINESIS_NAME']
 
 
 def handler(event, context):
-    # put item in table
-    # response = table.put_item(
-    #     Item={
-    #         'id': str(uuid.uuid4())
-    #     }
-    # )
-
-    current_timestamp = datetime.now()
-
     # response = cw_client.list_metrics(
     #     Namespace='AWS/Kinesis',
     #     MetricName='IncomingRecords',
     #     Dimensions=[
     #         {
     #             'Name': 'StreamName',
-    #             # 'Value': 'adaptative-kinesis-adaptedkinesisE800CEE2-4AC1a6OW7wkP'
     #             "Value": KINESIS_NAME
     #         },
     #     ],
@@ -54,37 +42,9 @@ def handler(event, context):
     #     # OwningAccount='string'
     # )
     
-    response = cw_client.get_metric_data(
-        MetricDataQueries=[
-            {
-                'Id': 'adaptedKinesisIncomingRecords',
-                'MetricStat': {
-                    'Metric': {
-                        'Namespace': 'AWS/Kinesis',
-                        'MetricName': 'IncomingRecords',
-                        'Dimensions': [
-                            {
-                                'Name': 'StreamName',
-                                'Value': KINESIS_NAME
-                            },
-                        ]
-                    },
-                    'Period': 30,
-                    'Stat': 'Sum',
-                    # 'Unit': 'Seconds'|'Microseconds'|'Milliseconds'|'Bytes'|'Kilobytes'|'Megabytes'|'Gigabytes'|'Terabytes'|'Bits'|'Kilobits'|'Megabits'|'Gigabits'|'Terabits'|'Percent'|'Count'|'Bytes/Second'|'Kilobytes/Second'|'Megabytes/Second'|'Gigabytes/Second'|'Terabytes/Second'|'Bits/Second'|'Kilobits/Second'|'Megabits/Second'|'Gigabits/Second'|'Terabits/Second'|'Count/Second'|'None'
-                },
-                # 'Expression': 'string',
-                # 'Label': 'string',
-                'ReturnData': True,
-                # 'Period': 1,
-            },
-        ],
-        StartTime=current_timestamp - timedelta(minutes=1),
-        EndTime=current_timestamp,
-    )
+    total_records = get_last_minute_records(KINESIS_NAME, cw_client, 1)
 
-    # print(response)
-    # print(json.dumps(response, indent=4, cls=DecimalEncoder))
+    print(total_records)
     
     # get_stream_description = kinesis_client.describe_stream(
     #     StreamName=KINESIS_NAME,
@@ -113,7 +73,3 @@ def handler(event, context):
     # print(get_shard)
 
     return 0
-
-    # return {
-    #     'statusCode': 200,
-    # }
