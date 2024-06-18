@@ -1,0 +1,21 @@
+timestamp,message,logStreamName
+1718736598368,"{'EXPERIMENT_NAME': 'SECOND_PI_EXPERIMENT', 'total_average_records': 745, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T18:49:58.368958'}
+",2024/06/18/[$LATEST]11e0f33f6d5f47479954e7554f19a676
+1718736658561,"{'EXPERIMENT_NAME': 'SECOND_PI_EXPERIMENT', 'total_average_records': 754, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T18:50:58.561335'}
+",2024/06/18/[$LATEST]11e0f33f6d5f47479954e7554f19a676
+1718736718389,"{'EXPERIMENT_NAME': 'SECOND_PI_EXPERIMENT', 'total_average_records': 1337, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T18:51:58.389032'}
+",2024/06/18/[$LATEST]11e0f33f6d5f47479954e7554f19a676
+1718736778550,"{'EXPERIMENT_NAME': 'SECOND_PI_EXPERIMENT', 'total_average_records': 2404, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T18:52:58.550621'}
+",2024/06/18/[$LATEST]11e0f33f6d5f47479954e7554f19a676
+1718736838668,"{'EXPERIMENT_NAME': 'SECOND_PI_EXPERIMENT', 'total_average_records': 2683, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T18:53:58.663310'}
+",2024/06/18/[$LATEST]11e0f33f6d5f47479954e7554f19a676
+1718736898529,"{'EXPERIMENT_NAME': 'SECOND_PI_EXPERIMENT', 'total_average_records': 2708, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T18:54:58.529540'}
+",2024/06/18/[$LATEST]11e0f33f6d5f47479954e7554f19a676
+1718736958668,"{'EXPERIMENT_NAME': 'SECOND_PI_EXPERIMENT', 'total_average_records': 2741, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 3, 'timestamp': '2024-06-18T18:55:58.668535'}
+",2024/06/18/[$LATEST]11e0f33f6d5f47479954e7554f19a676
+1718737018471,"{'EXPERIMENT_NAME': 'SECOND_PI_EXPERIMENT', 'total_average_records': 2691, 'goal': 2000, 'current_active_shard_count': 2, 'controller_output': 4, 'timestamp': '2024-06-18T18:56:58.471036'}
+",2024/06/18/[$LATEST]11e0f33f6d5f47479954e7554f19a676
+1718737078509,"{'EXPERIMENT_NAME': 'SECOND_PI_EXPERIMENT', 'total_average_records': 1933, 'goal': 4000, 'current_active_shard_count': 4, 'controller_output': 4, 'timestamp': '2024-06-18T18:57:58.509857'}
+",2024/06/18/[$LATEST]11e0f33f6d5f47479954e7554f19a676
+1718737138738,"{'EXPERIMENT_NAME': 'SECOND_PI_EXPERIMENT', 'total_average_records': 1091, 'goal': 4000, 'current_active_shard_count': 4, 'controller_output': 3, 'timestamp': '2024-06-18T18:58:58.738265'}
+",2024/06/18/[$LATEST]11e0f33f6d5f47479954e7554f19a676

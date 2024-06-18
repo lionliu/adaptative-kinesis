@@ -4,6 +4,7 @@ from aws_cdk import Duration, Stack
 
 from constructs import Construct
 
+CURRENT_EXPERIMENT_NAME = ""
 
 class AdaptativeKinesisStack(Stack):
 
@@ -15,6 +16,8 @@ class AdaptativeKinesisStack(Stack):
             id="adapted_kinesis",
             stream_name="adapted_kinesis",
         )
+
+        lambda_base_access = aws_iam.ManagedPolicy.from_aws_managed_policy_name("service-role/AWSLambdaBasicExecutionRole")
 
         self.adapter_lambda_role = aws_iam.Role(
             self,
@@ -54,21 +57,11 @@ class AdaptativeKinesisStack(Stack):
             role=self.adapter_lambda_role,
         )
 
-        self.producer_lambda = aws_lambda.Function(
-            self, "producer_kinesis_lambda_function",
-            function_name="producer_kinesis_lambda_function",
-            runtime=aws_lambda.Runtime.PYTHON_3_11,
-            handler="index.handler",
-            code=aws_lambda.Code.from_asset("./lambdas/functions/producer")
-        )
+        self.adapter_lambda.role.add_managed_policy(lambda_base_access)
 
-        # grant permission to lambda to write to demo table
-        # demo_table.grant_write_data(adapter_lambda)
 
-        self.adapted_kinesis.grant_write(self.producer_lambda)
         self.adapted_kinesis.grant_read(self.adapter_lambda)
 
-
         self.adapter_lambda.add_environment(
             "KINESIS_ARN", self.adapted_kinesis.stream_arn
         )
@@ -77,12 +70,8 @@ class AdaptativeKinesisStack(Stack):
             "KINESIS_NAME", self.adapted_kinesis.stream_name
         )
 
-        self.producer_lambda.add_environment(
-            "KINESIS_ARN", self.adapted_kinesis.stream_arn
-        )
-
-        self.producer_lambda.add_environment(
-            "KINESIS_NAME", self.adapted_kinesis.stream_name
+        self.adapter_lambda.add_environment(
+            "EXPERIMENT_NAME", CURRENT_EXPERIMENT_NAME
         )
 
         # create a Cloudwatch Event rule
@@ -93,11 +82,8 @@ class AdaptativeKinesisStack(Stack):
 
         self.one_minute_rule.apply_removal_policy(cdk.RemovalPolicy.DESTROY)
         self.adapter_lambda.apply_removal_policy(cdk.RemovalPolicy.DESTROY)
-        self.producer_lambda.apply_removal_policy(cdk.RemovalPolicy.DESTROY)
-
-        # self.adapter_lambda.add_permission()
 
         # Add target to Cloudwatch Event
-        # one_minute_rule.add_target(
-        #     aws_events_targets.LambdaFunction(producer_lambda)
-        # )
+        self.one_minute_rule.add_target(
+            aws_events_targets.LambdaFunction(self.adapter_lambda)
+        )

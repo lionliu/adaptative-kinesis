@@ -1,0 +1,51 @@
+timestamp,message,logStreamName
+1718729958755,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 0, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T16:59:18.755459'}
+",2024/06/18/[$LATEST]2e62347a591d4b7986c5a8f44a9295de
+1718730018164,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 104, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T17:00:18.164835'}
+",2024/06/18/[$LATEST]2e62347a591d4b7986c5a8f44a9295de
+1718730078071,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 708, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T17:01:18.071280'}
+",2024/06/18/[$LATEST]2e62347a591d4b7986c5a8f44a9295de
+1718730138857,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 758, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T17:02:18.857204'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730198416,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 741, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T17:03:18.416278'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730258389,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 750, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T17:04:18.389156'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730317976,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 758, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T17:05:17.976178'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730378350,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 2591, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 3, 'timestamp': '2024-06-18T17:06:18.350296'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730438087,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 2716, 'goal': 2000, 'current_active_shard_count': 2, 'controller_output': 3, 'timestamp': '2024-06-18T17:07:18.087852'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730498110,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 2666, 'goal': 3000, 'current_active_shard_count': 3, 'controller_output': 3, 'timestamp': '2024-06-18T17:08:18.098202'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730558175,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 2679, 'goal': 3000, 'current_active_shard_count': 3, 'controller_output': 3, 'timestamp': '2024-06-18T17:09:18.175133'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730618188,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 2687, 'goal': 3000, 'current_active_shard_count': 3, 'controller_output': 3, 'timestamp': '2024-06-18T17:10:18.188285'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730678042,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 1183, 'goal': 3000, 'current_active_shard_count': 3, 'controller_output': 2, 'timestamp': '2024-06-18T17:11:18.042449'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730738125,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 1066, 'goal': 2000, 'current_active_shard_count': 2, 'controller_output': 2, 'timestamp': '2024-06-18T17:12:18.125338'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730798168,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 1075, 'goal': 2000, 'current_active_shard_count': 2, 'controller_output': 2, 'timestamp': '2024-06-18T17:13:18.168871'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730858068,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 1075, 'goal': 2000, 'current_active_shard_count': 2, 'controller_output': 2, 'timestamp': '2024-06-18T17:14:18.068579'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730918161,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 1079, 'goal': 2000, 'current_active_shard_count': 2, 'controller_output': 2, 'timestamp': '2024-06-18T17:15:18.161681'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718730978190,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 1954, 'goal': 2000, 'current_active_shard_count': 2, 'controller_output': 2, 'timestamp': '2024-06-18T17:16:18.190582'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718731038098,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 2025, 'goal': 2000, 'current_active_shard_count': 2, 'controller_output': 3, 'timestamp': '2024-06-18T17:17:18.098633'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718731098219,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 2025, 'goal': 3000, 'current_active_shard_count': 3, 'controller_output': 3, 'timestamp': '2024-06-18T17:18:18.219100'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718731158054,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 2025, 'goal': 3000, 'current_active_shard_count': 3, 'controller_output': 3, 'timestamp': '2024-06-18T17:19:18.053255'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718731218112,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 2020, 'goal': 3000, 'current_active_shard_count': 3, 'controller_output': 3, 'timestamp': '2024-06-18T17:20:18.112953'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718731278106,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 145, 'goal': 3000, 'current_active_shard_count': 3, 'controller_output': 1, 'timestamp': '2024-06-18T17:21:18.106540'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718731338159,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 0, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T17:22:18.159277'}
+",2024/06/18/[$LATEST]075ec06c98014d6989b3e4665a49fe28
+1718731398855,"{'EXPERIMENT_NAME': 'SECOND_HPA_EXPERIMENT', 'total_average_records': 0, 'goal': 1000, 'current_active_shard_count': 1, 'controller_output': 1, 'timestamp': '2024-06-18T17:23:18.855023'}
+",2024/06/18/[$LATEST]044cf6917587415a838fa24af13a2243
