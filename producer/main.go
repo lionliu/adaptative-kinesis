@@ -15,8 +15,8 @@ import (
 )
 
 type ExperimentSetup struct {
-    burstSize int
-    msLag int
+	burstSize int
+	msLag     int
 }
 
 func main() {
@@ -37,20 +37,19 @@ func main() {
 		}
 	}
 
-    experimentRanges := [4]ExperimentSetup{
-        {burstSize: 2, msLag: 500},
-        {burstSize: 8, msLag: 100},
-        {burstSize: 2, msLag: 300},
-        {burstSize: 6, msLag: 100},
-    }
+	experimentRanges := [4]ExperimentSetup{
+		{burstSize: 2, msLag: 500},
+		{burstSize: 8, msLag: 100},
+		{burstSize: 2, msLag: 300},
+		{burstSize: 6, msLag: 100},
+	}
 
-    start_time := time.Now()
+	start_time := time.Now()
 
-    currentExperiment := 0
+	currentExperiment := 0
 
 	for {
 		// viper.SetConfigFile(".env")
-
 
 		// err := viper.ReadInConfig()
 		// if err != nil {
@@ -68,7 +67,7 @@ func main() {
 		// 	log.Fatalf("Error converting BURST to int, %s", err)
 		// }
 
-        burstSize := experimentRanges[currentExperiment].burstSize
+		burstSize := experimentRanges[currentExperiment].burstSize
 
 		fmt.Println("Burst size:", burstSize)
 		totalFailed := 0
@@ -109,21 +108,21 @@ func main() {
 		// 	log.Fatalf("Error converting msLag to int, %s", err)
 		// }
 
-        msLag := experimentRanges[currentExperiment].msLag
+		msLag := experimentRanges[currentExperiment].msLag
 
-        currentExperimentTime := time.Now()
+		currentExperimentTime := time.Now()
 
-        diff := currentExperimentTime.Sub(start_time)
-        if diff.Minutes() > 5 {
-            currentExperiment += 1
-            start_time = currentExperimentTime
+		diff := currentExperimentTime.Sub(start_time)
+		if diff.Minutes() > 5 {
+			currentExperiment += 1
+			start_time = currentExperimentTime
 
-            if currentExperiment == len(experimentRanges) {
-                fmt.Println("All experiments completed")
-                break
-            }
-        }
-        
+			if currentExperiment == len(experimentRanges) {
+				fmt.Println("All experiments completed")
+				break
+			}
+		}
+
 		time.Sleep(time.Duration(msLag) * time.Millisecond)
 	}
 
